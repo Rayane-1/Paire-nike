@@ -1,6 +1,5 @@
 
 
-
 header{
 display:flex;
 width: 100%;
@@ -85,7 +84,7 @@ column-gap: 1%;
     
 }
 .demi{
-width: 4%;
+width: 4.5%;
 background-color: #C4C4C4;
 display: flex;
 }
@@ -97,22 +96,16 @@ background-color: white;
 width: 8%;
 background-color: #C4C4C4;
 }
-.ajouter{
-display: flex;
-background-color: #C4C4C4;
-margin-top: 10%;
-width: 38%;
-margin-left: 14%;
-border-radius: 10px;
-box-shadow: 2px 2px 2px black; 
-padding-left: 9%;
 
-}
 .shop{
 display: flex;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-size: 150%;
 font-weight: 100;
+margin-left: 20%;
+box-shadow: 1px 1px 1px black; 
+margin-top: 8%;
+border-radius: 7px;
 }
 .carre{
 display: flex;
@@ -123,11 +116,120 @@ background-color: #C4C4C4;
 display: flex;
 margin-left: 71%;
 margin-top: -5%;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+
+  }
+  
+  .popup.active {
+    display: inline-block;
+    background-color: rgb(0, 0,0,0.4);
+  }
+  
+  .popup-content {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    height: 34%;
+    width: 49%;
+    border: 1px solid rgb(22, 22, 22);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: top 250ms linear, opacity 200ms linear;
+    background-color:white;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .popup-content.active {
+    opacity: 1;
+    top: 28% !important;
+  }
+  .btn-close {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .popup-header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+ font-size: 124%;
+  }
+  .popup-body {
+    height: 88%;
+    padding: 2%;
+    overflow-y: auto;
+    background-color: rgba(238, 238, 238, 0.726);
+    display: flex;
+  }
+.partie-gauche{
+display: flex;
+flex-direction: column;
+width: 50%;
+align-items: center;
 
 }
-a:visited {
-    color: #000000;
-  }
-  a {
-    outline: none;
-    text-decoration: none;}
+.partie-droite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:45%;
+    padding-top: 2%;
+    justify-content: space-around;
+}
+.gauche-photo{
+display: flex;
+padding-left: 22%;
+padding-top: 11%;
+width: 143%;
+}
+.gauche-paire{
+    display: flex;
+  
+    }
+    .gauche-prix{
+display: flex;
+
+
+    }
+    .gauche-pointure{
+display: flex;
+
+    }
+    .droite-titre{
+display: flex;
+font-weight: 700;
+    }
+.droite-coût{
+    display: flex;
+     font-weight: 700;
+    }
+    a:visited {
+        color: #000000;
+      }
+      a {
+        outline: none;
+        text-decoration: none;}
+.partie-detail{
+display: flex;
+flex-direction: column;
+width: 20%;
+justify-content:space-around;
+padding-left: 4%;
+}

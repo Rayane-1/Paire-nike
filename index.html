@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -54,14 +54,45 @@
 </div>
 <div class="pointur">  47.5&emsp;
   <div class="car"> 48.5    </div></div>
-<div class="ajouter">
-  <a href="#"> <div class="shop">Ajouter au Panier</div></a>
+
+   <button data-popup-ref="monPopup" class="shop">Ajouter au Panier</button>
   
-</div> 
-<div class="coeur">
-<img src="img/coeur.png" width=19%>
+  <div class ="popup" data-popup-Id="monPopup">
+    <div class="popup-content">
+      <div class="popup-header">
+        <div class="title"> ARTICLE AJOUTÉ AVEC SUCCÈS AU PANIER! </div>
+        <span class="btn-close" data-dismiss-popup> &times; </span>
+     </div>
+  
+      
+          <div class="popup-body">  
+          <div class="partie-gauche">
+            <div class="gauche-photo">  <img src="img/air max 270.jfif" width=30%> <div class="partie-detail"> <div class="gauche-paire">AIR MAX 270            </div>
+            <div class="gauche-prix"> 149.99€          </div>
+            <div class="gauche-pointure">  Taille: 44           Qté: 1     </div>  </div></div>
+            
+          </div> 
+          <hr>
+          <div class="partie-droite">                   
+          <div class="droite-titre"> MON PANIER     </div>
+          <div class="droite-article">  1 artcile  </div>
+          <div class="droite-livraison">Coût livraison: Gratuit       </div>
+          <hr>
+          <div class="droite-coût"> Total:149.99€ (TTC)            </div>
+          <div class="droite-voir"> Voir mon panier   </div>
+          <div class="droite-commander"><a href="">Commander</a>      </div>
+          </div>
 
-
+  
+  </div>
 </div>
+</div>
+
+<div class="coeur">
+<img src="img/coeur.png" width=19%></div>
+    
+
+
+
 </body>
 </html>
